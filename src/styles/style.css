@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr .4fr 1fr;
+    grid-template-rows: 1fr 1fr 70px 1fr;
+    border: 1px solid black;
+}
+
+/* HERO */
+
+main .hero {
+    position: relative;
+    grid-area: 1/1/4/3;
+}
+main .hero img {
+    width: 100%;
+    height: 100%;
+}
+main .hero .menu {
+    position: absolute;
+    display: flex;
+    width: 75%;
+    height: 30px;
+    left: 8%;
+    top: 10%;
+}
+main .hero .menu img {
+    width: 60px;
+    height: 15px;
+}
+main .hero .menu ul {
+    display: flex;
+    list-style: none;
+    margin-left: 30px;
+}
+main .hero .menu ul a {
+    text-decoration: none;
+}
+main .hero .menu ul a li {
+    margin-left: 55px;
+    color: hsl(0, 0%, 100%);
+}
+main .hero .menu ul a li:hover {
+    cursor: pointer;
+    border-bottom: 3px solid white;
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+/* HERO-DESCRIPTION */
+
+main .hero-description {
+    grid-area: 1 / 3 / 4 /5;
+}
+main .hero-description .text {
+    width: 74%;
+    height: 55%;
+    margin: 0 auto;
+    margin-top: 110px;
+    text-align: left;
+}
+main .hero-description .text h1 {
+    margin-top: 10px;
+    font-size: 2.1vw;
+    font-weight: 700;
+}
+main .hero-description .text p {
+    margin-top: 20px;
+    color: hsl(0, 0%, 63%);
+    margin-bottom: 25px;
+}
+main .hero-description .text .link {
+    width: 190px;
+}
+main .hero-description .text .link a {
+    color: hsl(0, 0%, 63%);
+    text-decoration: none;
+    margin-left: 5px;
+    letter-spacing: 7px;
+}
+main .hero-description .text .link:hover {
+    transform: scale(1.04);
+    transition: ease 0.3s;
+}
+main .hero-description .text .link:hover a {
+    color: black;
+    transition: 0.3s;
+}
+main .hero-description .text .link a img {
+    background-color: white;
+    color: hsl(0, 0%, 63%);
+    margin-left: 10px;
+}
+
+/* BUTTONS */
+
+main .slider-buttons {
+    grid-area: 3/3/4/4;
+}
+main .slider-buttons .buttons-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+main .slider-buttons .buttons-container button {
+    width: 50%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: black;
+}
+main .slider-buttons .buttons-container button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 27%);
+    transition: 0.3s;
+}
+
+/* FOOTER-LEFT-RIGHT */
+
+main .footer-left {
+    grid-area: 4/1/5/2;
+}
+main .footer-right {
+    grid-area: 4/4/5/5;
+}
+main .footer-left img, .footer-right img {
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER-TEXT */
+
+main .footer-center {
+    grid-area: 4/2/5/4;
+}
+main .footer-center .footer-text {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 78%;
+    height: 50%;
+}
+main .footer-center h2 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+main .footer-center .footer-text p {
+    color: hsl(0, 0%, 63%);
+}
+
+
