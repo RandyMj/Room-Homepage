@@ -15,7 +15,6 @@ main {
     display: grid;
     grid-template-columns: 1fr 1.3fr .4fr 1fr;
     grid-template-rows: 1fr 1fr 70px 1fr;
-    border: 1px solid black;
 }
 
 /* HERO */
@@ -43,13 +42,12 @@ main .hero .menu img {
 main .hero .menu ul {
     display: flex;
     list-style: none;
-    margin-left: 30px;
 }
 main .hero .menu ul a {
     text-decoration: none;
 }
 main .hero .menu ul a li {
-    margin-left: 55px;
+    margin-left: 50px;
     color: hsl(0, 0%, 100%);
 }
 main .hero .menu ul a li:hover {
@@ -73,7 +71,7 @@ main .hero-description .text {
 }
 main .hero-description .text h1 {
     margin-top: 10px;
-    font-size: 2.1vw;
+    font-size: 2.3vw;
     font-weight: 700;
 }
 main .hero-description .text p {
