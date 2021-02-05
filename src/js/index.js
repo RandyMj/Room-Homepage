@@ -23,7 +23,7 @@ const profiles = [
 ];
 
 // next.addEventListener('click', () => {
-//     function number() {
+//     let i = function number() {
 
 //     }
 // });
