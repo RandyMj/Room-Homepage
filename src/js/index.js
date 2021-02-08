@@ -23,16 +23,18 @@ const profiles = [
     }
 ];
 
+
 next.addEventListener('click', () => {
     function sum() {
-        if(i<profiles.length) {
+        if (i < profiles.length) {
             i++;
         }
-        if (i===profiles.length) {
-            i=0;
+        if (i === profiles.length) {
+            i = 0;
         }
     };
     sum();
+
     function profilesChange() {
         heroImg.setAttribute('src', `${profiles[i].img}`);
         heroTitle.innerHTML = `${profiles[i].title}`;
@@ -42,17 +44,14 @@ next.addEventListener('click', () => {
 });
 prev.addEventListener('click', () => {
     function sub() {
-        if(i===0) {
-            i=2;
-        }
-        else if(i===1) {
-            i=0;
-        }
-        else if(i===2) {
-            i=1;
+        if (i > 0) {
+            i--;
+        } else if (i === 0) {
+            i = profiles.length - 1;
         }
     };
     sub();
+
     function profilesChange() {
         heroImg.setAttribute('src', `${profiles[i].img}`);
         heroTitle.innerHTML = `${profiles[i].title}`;
