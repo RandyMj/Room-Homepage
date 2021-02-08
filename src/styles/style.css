@@ -8,6 +8,7 @@ body {
     height: 100vh;
     font-family: 'Spartan', sans-serif;
     font-size: 12px;
+    overflow: hidden;
 }
 main {
     width: 100vw;

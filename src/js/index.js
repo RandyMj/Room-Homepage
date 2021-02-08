@@ -3,6 +3,7 @@ const next = document.getElementById('nextBtn');
 const heroImg = document.getElementById('hero');
 const heroTitle = document.getElementById('hero-description-title');
 const heroText = document.getElementById('hero-description-text');
+var i = 0;
 
 const profiles = [
     one = {
@@ -22,44 +23,78 @@ const profiles = [
     }
 ];
 
-// next.addEventListener('click', () => {
-//     let i = function number() {
-
-//     }
-// });
-
 next.addEventListener('click', () => {
-    var src = heroImg.getAttribute('src');
-    if(src === profiles[0].img) {
-        heroImg.setAttribute('src', `${profiles[1].img}`);
-        heroTitle.innerHTML = `${profiles[1].title}`;
-        heroText.innerHTML = `${profiles[1].text}`;
-    } else if(src === profiles[1].img) {
-        heroImg.setAttribute('src', `${profiles[2].img}`);
-        heroTitle.innerHTML = `${profiles[2].title}`;
-        heroText.innerHTML = `${profiles[2].text}`;
-    } else {
-        heroImg.setAttribute('src', `${profiles[0].img}`);
-        heroTitle.innerHTML = `${profiles[0].title}`;
-        heroText.innerHTML = `${profiles[0].text}`;
-    }
+    function sum() {
+        if(i<profiles.length) {
+            i++;
+        }
+        if (i===profiles.length) {
+            i=0;
+        }
+    };
+    sum();
+    function profilesChange() {
+        heroImg.setAttribute('src', `${profiles[i].img}`);
+        heroTitle.innerHTML = `${profiles[i].title}`;
+        heroText.innerHTML = `${profiles[i].text}`;
+    };
+    profilesChange();
 });
 prev.addEventListener('click', () => {
-    var src = heroImg.getAttribute('src');
-    if(src === profiles[0].img) {
-        heroImg.setAttribute('src', `${profiles[2].img}`);
-        heroTitle.innerHTML = `${profiles[2].title}`;
-        heroText.innerHTML = `${profiles[2].text}`;
-    } else if(src === profiles[1].img) {
-        heroImg.setAttribute('src', `${profiles[0].img}`);
-        heroTitle.innerHTML = `${profiles[0].title}`;
-        heroText.innerHTML = `${profiles[0].text}`;
-    } else {
-        heroImg.setAttribute('src', `${profiles[1].img}`);
-        heroTitle.innerHTML = `${profiles[1].title}`;
-        heroText.innerHTML = `${profiles[1].text}`;
-    }
+    function sub() {
+        if(i===0) {
+            i=2;
+        }
+        else if(i===1) {
+            i=0;
+        }
+        else if(i===2) {
+            i=1;
+        }
+    };
+    sub();
+    function profilesChange() {
+        heroImg.setAttribute('src', `${profiles[i].img}`);
+        heroTitle.innerHTML = `${profiles[i].title}`;
+        heroText.innerHTML = `${profiles[i].text}`;
+    };
+    profilesChange();
 });
+
+
+
+// next.addEventListener('click', () => {
+//     var src = heroImg.getAttribute('src');
+//     if(src === profiles[0].img) {
+//         heroImg.setAttribute('src', `${profiles[1].img}`);
+//         heroTitle.innerHTML = `${profiles[1].title}`;
+//         heroText.innerHTML = `${profiles[1].text}`;
+//     } else if(src === profiles[1].img) {
+//         heroImg.setAttribute('src', `${profiles[2].img}`);
+//         heroTitle.innerHTML = `${profiles[2].title}`;
+//         heroText.innerHTML = `${profiles[2].text}`;
+//     } else {
+//         heroImg.setAttribute('src', `${profiles[0].img}`);
+//         heroTitle.innerHTML = `${profiles[0].title}`;
+//         heroText.innerHTML = `${profiles[0].text}`;
+//     }
+// });
+// prev.addEventListener('click', () => {
+//     var src = heroImg.getAttribute('src');
+//     if(src === profiles[0].img) {
+//         heroImg.setAttribute('src', `${profiles[2].img}`);
+//         heroTitle.innerHTML = `${profiles[2].title}`;
+//         heroText.innerHTML = `${profiles[2].text}`;
+//     } else if(src === profiles[1].img) {
+//         heroImg.setAttribute('src', `${profiles[0].img}`);
+//         heroTitle.innerHTML = `${profiles[0].title}`;
+//         heroText.innerHTML = `${profiles[0].text}`;
+//     } else {
+//         heroImg.setAttribute('src', `${profiles[1].img}`);
+//         heroTitle.innerHTML = `${profiles[1].title}`;
+//         heroText.innerHTML = `${profiles[1].text}`;
+//     }
+// });
 
 
 
