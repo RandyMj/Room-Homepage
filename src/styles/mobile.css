@@ -1,3 +1,6 @@
+body {
+    overflow: auto;
+}
 main {
     height: 1200px;
     grid-template-rows: 325px 50px 325px repeat(4, 250px);
